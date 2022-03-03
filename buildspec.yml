@@ -4,7 +4,8 @@ phases:
    commands:
      - curl -s https://getcomposer.org/installer | php 
      - mv  composer.phar /usr/local/bin/composer
-     - composer
+     - npm install
+     - npm run prod
      - php --version
 
 
@@ -13,6 +14,11 @@ phases:
      - echo Build started on `date`
      - echo Installing composer deps
      - composer install
+     - composer
+     - cp .env.example .env
+     - php artisan key:generate
+     - php artisan config:cache
+     - php artisan route:cache
      - php artisan cache:clear
 
  post_build:
