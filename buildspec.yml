@@ -20,19 +20,15 @@ phases:
      - php artisan config:cache
      - php artisan route:cache
      - php artisan cache:clear
-     - cd $CODEBUILD_SRC_DIR
-     - touch laravel
+    
      
 
  post_build:
    commands:
      - echo Build completed on `date`
-artifacts:
-  type: zip
-  files:
-    - '**/*'
-artifact1:
-  base-directory: $CODEBUILD_SRC_DIR
-    files:
-      - laravel
+ artifacts:
+   type: zip
+   files:
+     - '**/*'
+
   name: clyde-$(date +%Y-%m-%d)
