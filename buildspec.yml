@@ -30,5 +30,4 @@ phases:
    type: zip
    files:
      - '**/*'
-
-  name: clyde-$(date +%Y-%m-%d)
+   name: clyde-$(date +%Y-%m-%d)
