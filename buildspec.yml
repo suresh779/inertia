@@ -31,9 +31,8 @@ artifacts:
   type: zip
   files:
     - '**/*'
-secondary-artifacts:
-  artifact1:
-    base-directory: $CODEBUILD_SRC_DIR
+artifact1:
+  base-directory: $CODEBUILD_SRC_DIR
     files:
       - laravel
   name: clyde-$(date +%Y-%m-%d)
