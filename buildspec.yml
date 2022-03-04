@@ -23,7 +23,6 @@ phases:
    commands:
      - echo Build completed on `date`
 artifacts:
-  type: zip
   files:
     - '**/*'
-  name: clyde-$(date +%Y-%m-%d)
+  name: Laravel-$(date +%Y-%m-%d)
