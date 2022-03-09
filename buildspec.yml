@@ -1,6 +1,8 @@
 version: 0.2
 phases:
  install:
+   runtime-versions:
+     php: 8.x
    commands:
      - curl -s https://getcomposer.org/installer | php
      - mv  composer.phar /usr/local/bin/composer
